@@ -7,7 +7,7 @@ FONT SIZE SYSTEM (px)
 -Line Heights: 
 default :1
 
-- Font weight :400
+- Font weight :400,500,600,700
 
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
@@ -25,8 +25,9 @@ Greys:
 
 -03 -- SHADOWS
 
--04 -- BORDER-RADIUS 
 
+-04 -- BORDER-RADIUS 
+ --9px
 -05 -- WHITESPACE
 */
 
@@ -100,6 +101,39 @@ body {
 .logo {
   height: 2rem;
 }
+/* NAVIGATION */
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+  list-style: none;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s;
+  font-size: 1.8rem;
+}
+
+.main-nav-link:active,
+.main-nav-link:hover {
+  text-decoration: none;
+  color: #cf711f;
+}
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  background-color: #e67e22;
+  color: #fff;
+}
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
 /* HERO SECTION  */
 .section-hero {
   background-color: #fdf2e9;
@@ -108,7 +142,7 @@ body {
 .hero {
   max-width: 130rem;
   margin: 0 auto;
-  padding:0 3.2rem;
+  padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 9.6rem;
