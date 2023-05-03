@@ -135,6 +135,30 @@ body {
 
   box-shadow: 0 0 0 3px #fff;
 }
+.link:link,
+.link:visited {
+  text-decoration: none;
+  border-bottom: 1px solid #e67e22;
+  padding-bottom:5px;
+  display: inline-block;
+  color: #e67e22;
+}
+.link:hover,
+.link:active {
+  border-bottom: 1px solid transparent;
+  color: #cf711f;
+  transition:all 0.3s;
+}
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+strong {
+  font-weight: 500;
+}
+
+.center-text{
+  text-align: center;
 }
