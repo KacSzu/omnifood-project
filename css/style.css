@@ -169,7 +169,6 @@
 /* MEALS SECTION */
 
 .section-meals {
-  
   padding: 9.6rem 0;
 }
 .meal-title {
@@ -183,13 +182,11 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
 }
 
-.meal:hover{
+.meal:hover {
   transform: translateY(-1rem);
   box-shadow: 0px 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
- 
 }
 .meal-content {
   padding: 3.2rem 4.8rem 4.8rem 4.8rem;
@@ -244,9 +241,9 @@
 }
 
 .list {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  gap:1.6rem;
+  gap: 1.6rem;
   list-style: none;
 }
 .list-icon {
@@ -256,13 +253,67 @@
   color: #cf711f;
 }
 
-.list-item{
-  display:flex;
-align-items: center;
-gap:1.6rem;
-  font-size: 1.8rem
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: 1.8rem;
 }
-.all-recipes{
+.all-recipes {
   text-align: center;
-  font-size:1.8rem
+  font-size: 1.8rem;
+}
+
+/* SECTION TESTIMONIAL */
+
+.section-testimonials {
+  display:grid;
+  grid-template-columns: 0.6fr 0.4fr;
+  background-color: #fdf2e9;
+  align-items: center;
+}
+.img-testimonial {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+.testimonials-container {
+  padding: 9.6rem ;
+}
+.testimonials {
+  display: grid;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows:repeat(4,1fr) */
+}
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+.gallery {
+  padding: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1.6rem;
+}
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+transform: scale(1.2);
+}
+.gallery-item{
+  overflow: hidden;
 }
