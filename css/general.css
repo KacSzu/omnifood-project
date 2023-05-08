@@ -19,12 +19,16 @@ SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
 -02 -- COLORS
-Primary:#e67e22
-Tint:#fdf2e9
+Primary:
+#e67e22
+Tint:
+#fdf2e9
 #fae5d3
+#eb984e
 
-Tints:
+
 Shades:
+#45260a
 Accents:
 Greys: 
     #555
@@ -32,7 +36,7 @@ Greys:
     #6f6f6f
 
 -03 -- SHADOWS
-
+ box-shadow: 0px 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 -04 -- BORDER-RADIUS 
  --9px
@@ -65,7 +69,7 @@ body {
   row-gap: 9.6rem;
   column-gap: 4.8rem;
 }
-.grid:not(:last-child){
+.grid:not(:last-child) {
   margin-bottom: 9.6rem;
 }
 .grid--center-v {
@@ -111,13 +115,16 @@ body {
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
 }
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
   padding: 1.6rem 3.2rem;
   font-weight: 600;
   font-size: 2rem;
-  color: #fff;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
   text-decoration: none;
   border-radius: 9px;
   transition: all 0.3s;
@@ -125,6 +132,7 @@ body {
 .btn--full:link,
 .btn--full:visited {
   background-color: #e67e22;
+  color: #fff;
 }
 .btn--full:hover,
 .btn--full:active {
@@ -141,6 +149,16 @@ body {
   color: #555;
 
   box-shadow: 0 0 0 3px #fff;
+}
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+.btn--form:hover{
+ background-color: #fff;
+ color: #555;
 }
 .link:link,
 .link:visited {
@@ -174,6 +192,10 @@ body {
   align-items: center;
   gap: 1.6rem;
   font-size: 1.8rem;
+}
+*:focus{
+  outline: none;
+  box-shadow: 0 0 0 0.8rem hsla(28, 80%, 52%, 0.541);
 }
 .margin-right-sm {
   margin-right: 1.6rem !important;
