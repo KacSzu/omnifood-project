@@ -75,41 +75,41 @@
   .logos img {
     height: 2.4rem;
   }
-  .step-number{
+  .step-number {
     font-size: 7.4rem;
   }
-.meal-content{
-    padding:2.4rem 3.2rem 3.2rem 3.2rem ;
-}
-.section-testimonials{
-    grid-template-columns:1fr;
-}
-.gallery{
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
-}
-.cta-form{
-grid-template-columns: 1fr
-}
-.btn--form{
+  }
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+  .btn--form {
     padding: 1.2rem;
-}
-}
+  }
 
-/* MOBILE NAVIGATION */
+  /* MOBILE NAVIGATION */
 
-.btn-mobile-nav{
-    display:block;
-}
-.main-nav{
+  .btn-mobile-nav {
+    display: block;
+    background-color: #fdf2e9;
+  }
+  .main-nav {
     background-color: white;
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    transform:translateX(100%);
-    display:flex;
+    transform: translateX(100%);
+    display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease-in;
@@ -118,25 +118,60 @@ grid-template-columns: 1fr
     pointer-events: none;
     /* hide it from screen readers */
     visibility: hidden;
-}
-.nav-open .main-nav{
-    opacity:1;
+  }
+  .nav-open .main-nav {
+    opacity: 1;
     pointer-events: auto;
-    visibility:visible;
-    transform:translateX(0);
-}
-.nav-open .icon-mobile-nav[name=close-outline]{
-    display:block;
-    
+    visibility: visible;
+    transform: translateX(0);
   }
- .nav-open .icon-mobile-nav[name=menu-outline]{
-    display:none;
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
   }
-.main-nav-list{
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+  .main-nav-list {
     flex-direction: column;
-    gap:4.8rem
-}
-.main-nav-link:link,
-.main-nav-link:visited {
+    gap: 4.8rem;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
     font-size: 3rem;
+  }
+}
+/* BELOW 736px(smaller tablets) */
+@media (max-width: 46em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diets {
+    grid-column: 1/-1;
+
+    justify-self: center;
+  }
+  .heading-secondary {
+    font-size: 3.6rem;
+    margin-bottom: 4.8rem;
+  }
+  .heading-tertiary {
+    font-size: 2.4rem;
+    margin-bottom: 1.6rem;
+  }
+  .pricing-plan {
+    width: 100%;
+  }
+  .grid-footer {
+    grid-template-columns:repeat(6,1fr)
+  }
+  .nav-col{
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+  .logo-column,.adress-column{
+    grid-column: span 3;
+  }
 }
