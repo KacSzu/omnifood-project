@@ -1,6 +1,5 @@
 console.log(`hello`);
 ///////////////////////////////////////////////////////////
-
 // MAKING MOBILE NAV WORK
 const mobileNavBtn = document.querySelector(`.btn-mobile-nav`);
 const headerEl = document.querySelector(`.header`);
@@ -41,6 +40,29 @@ allLinks.forEach(function (link) {
     //Scroll back to top
   });
 });
+
+///////////////////////////////////////////////////////////
+// MAKING STICKY NAV
+const sectionHeroEl =document.querySelector(`.section-hero`)
+const mobileIconEl =document.querySelector(`.icon-mobile-nav`)
+const obs =new IntersectionObserver(function(entries){
+  const ent=entries[0]
+  console.log(ent);
+  if(!ent.isIntersecting){
+    document.body.classList.add(`sticky`)
+    mobileIconEl.style.backgroundColor=`white`;
+  } else{
+    document.body.classList.remove(`sticky`)
+    mobileIconEl.style.backgroundColor=`#fdf2e9`;
+  }
+},{
+  root:null,
+  threshold:0,
+  rootMargin:`-80px`
+})
+obs.observe(sectionHeroEl)
+
+
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
