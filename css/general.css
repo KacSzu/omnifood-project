@@ -51,6 +51,8 @@ Greys:
 
 html {
   font-size: 62.5%;
+  /* doesn't work on every browser */
+  /* scroll-behavior: smooth; */
 }
 body {
   font-family: "Rubik", sans-serif;
@@ -58,6 +60,7 @@ body {
   font-weight: 400;
   color: #555;
   overflow-x:hidden ;
+
 }
 /* GENERAL COMPONENTS */
 .container {
